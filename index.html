@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate calories burned for various activities based on weight, duration, and intensity. Free, accurate, and easy to use.">
+    <meta name="keywords" content="Calorie Calculator, Calories Burned Calculator, Exercise Calculator, Fitness Calculator">
+    <meta name="author" content="Jay Prajapati">
+    <meta name="theme-color" content="#4CAF50">
+    <meta property="og:title" content="CalBurn - Calories Burned Calculator">
+    <meta property="og:description" content="Calculate calories burned for various activities...">
+    <title>CalBurn - Calories Burned Calculator</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+     <!-- Header -->
+     <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="website-title">
+                    <h1><i class="fas fa-fire" aria-hidden="true"></i> CalBurn</h1>
+                </div>
+                
+                <button 
+                    class="menu-toggle" 
+                    id="mobile-menu" 
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="main-nav"
+                >
+                </button>
+
+                <nav id="main-nav" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                            <span>Home</span>
+                        </a></li>
+                        <li><a href="about.html">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <span>About Us</span>
+                        </a></li>
+                        <li><a href="contact.html">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span>Contact</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="menu-overlay" id="menu-overlay"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container">
+        <section class="calorie-calculator" aria-labelledby="calculator-title">
+            <h2 id="calculator-title">Calculate Calories Burned</h2>
+            <p>Enter your details below to calculate calories burned during various activities.</p>
+            
+            <form id="calorie-form" class="tool-form">
+                <div class="input-group">
+                    <label for="weight">Weight (kg):</label>
+                    <input 
+                        type="number" 
+                        id="weight" 
+                        name="weight"
+                        min="30"
+                        max="300"
+                        required
+                        placeholder="Enter your weight"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="activity">Activity:</label>
+                    <select id="activity" name="activity" required>
+                        <option value="">Select an activity</option>
+                        <option value="walking">Walking</option>
+                        <option value="running">Running</option>
+                        <option value="cycling">Cycling</option>
+                        <option value="swimming">Swimming</option>
+                        <option value="weight_training">Weight Training</option>
+                        <option value="yoga">Yoga</option>
+                        <option value="dancing">Dancing</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="soccer">Soccer</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="intensity">Intensity:</label>
+                    <select id="intensity" name="intensity" required>
+                        <option value="">Select intensity level</option>
+                        <option value="low">Low</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="duration">Duration (minutes):</label>
+                    <input 
+                        type="number" 
+                        id="duration" 
+                        name="duration"
+                        min="1"
+                        max="600"
+                        required
+                        placeholder="Enter duration"
+                    >
+                </div>
+                
+                <button type="submit" id="calculate-calories" class="primary-button">
+                    <i class="fas fa-calculator" aria-hidden="true"></i>
+                    <span>Calculate Calories</span>
+                </button>
+            </form>
+
+            <div id="results" class="results hidden">
+                <h3>Results</h3>
+                <div class="result-card">
+                    <div class="calories-burned">
+                        <span id="calories-value">0</span>
+                        <span class="unit">calories</span>
+                    </div>
+                    <p class="result-description">Estimated calories burned based on your activity</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BMI Calculator Section -->
+        <section id="bmi-calculator" class="bmi-calculator">
+            <h2><i class="fas fa-weight" aria-hidden="true"></i> BMI Calculator</h2>
+            <form id="bmi-form" class="tool-form">
+                <div class="input-group">
+                    <label for="bmi-weight">Weight (kg):</label>
+                    <input type="number" id="bmi-weight" required min="30" max="300">
+                </div>
+                <div class="input-group">
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" required min="100" max="250">
+                </div>
+                <button type="submit" class="primary-button">
+                    <i class="fas fa-calculator" aria-hidden="true"></i>
+                    <span>Calculate BMI</span>
+                </button>
+            </form>
+            <div id="bmi-result" class="results hidden"></div>
+        </section>
+
+        <!-- Activity History -->
+        <section id="activity-history" class="activity-history">
+            <h2><i class="fas fa-chart-line" aria-hidden="true"></i> Activity History</h2>
+            <div class="chart-container">
+                <canvas id="activity-chart"></canvas>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features" aria-labelledby="features-title">
+            <h2 id="features-title"><i class="fas fa-bolt" aria-hidden="true"></i> Features</h2>
+            <div class="features-container">
+                <article class="feature-box">
+                    <i class="fas fa-fire" aria-hidden="true"></i>
+                    <h3>Accurate Calculations</h3>
+                    <p>Based on scientifically proven MET values for precise calorie burning estimates.</p>
+                </article>
+                <article class="feature-box">
+                    <i class="fas fa-history" aria-hidden="true"></i>
+                    <h3>Activity Tracking</h3>
+                    <p>Keep track of your exercises and monitor your progress over time.</p>
+                </article>
+                <article class="feature-box">
+                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access the calculator on any device with our responsive design.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h2><i class="fas fa-fire"></i> About CalBurn</h2>
+                <p>CalBurn is a free online tool to calculate calories burned during various physical activities instantly.</p>
+                <p>📧 Contact: uddan1711@gmail.com</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/prajapati_jay_1711/" aria-label="Instagram" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@QuickCompare_Official" aria-label="Youtube" target="_blank" rel="noopener">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jayprajapati171120/" aria-label="Linkedin" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/jay07112007" aria-label="GitHub" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tools & Features -->
+            <div class="footer-section">
+                <h2>Tools & Features</h2>
+                <ul>
+                    <li><a href="index.html">Calorie Calculator</a></li>
+                    <li><a href="#bmi-calculator">BMI Calculator</a></li>
+                    <li><a href="#activity-history">Activity History</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal & Info -->
+            <div class="footer-section">
+                <h2>Legal & Info</h2>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="dmca.html">DMCA Notice</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> CalBurn. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to Update Copyright Year -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
