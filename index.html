@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>CalBurn - Free Calories Burned Calculator | Track Your Fitness Journey</title>
+    <meta name="title" content="CalBurn - Free Calories Burned Calculator | Track Your Fitness Journey">
+    <meta name="description" content="Calculate calories burned for various activities with our free, accurate calculator. Features BMI calculator, activity tracking, and personalized fitness insights. Start your health journey today!">
+    <meta name="keywords" content="calorie calculator, calories burned calculator, BMI calculator, fitness tracker, workout calculator, exercise calculator, activity tracker, health calculator, fitness tools, weight loss calculator, calorie counter india, fitness calculator usa">
+    <meta name="author" content="Jay Prajapati">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#4CAF50">
+    <meta name="rating" content="General">
+    <meta name="copyright" content="Copyright © 2024 CalBurn">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="CalBurn">
+    <meta name="application-name" content="CalBurn">
+    <meta name="msapplication-TileColor" content="#4CAF50">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="distribution" content="Global">
+    <meta name="geo.position" content="23.033863;72.585022">
+    <meta name="ICBM" content="23.033863, 72.585022">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tool-star.github.io/">
+    <meta property="og:title" content="CalBurn - Free Calories Burned Calculator">
+    <meta property="og:description" content="Calculate calories burned for various activities with our free, accurate calculator. Features BMI calculator, activity tracking, and personalized fitness insights.">
+    <meta property="og:site_name" content="CalBurn">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="en_IN">
+    <meta property="og:locale:alternate" content="en_AE">
+    <meta property="og:locale:alternate" content="en_SG">
+    <meta property="og:locale:alternate" content="en_LK">
+    <meta property="og:locale:alternate" content="en_NP">
+    <meta property="og:locale:alternate" content="en_BD">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#4CAF50">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="app.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CalBurn",
+        "url": "https://tool-star.github.io/",
+        "description": "Free online calculator for tracking calories burned during various physical activities",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Jay Prajapati",
+            "url": "https://www.linkedin.com/in/jayprajapati171120/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "CalBurn",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://tool-star.github.io/apple-touch-icon.png"
+            }
+        },
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "softwareVersion": "1.0",
+        "fileSize": "0",
+        "interactionCount": "1000+",
+        "permissions": "no special permissions required",
+        "countriesSupported": ["IN", "US", "AE", "SG", "LK", "NP", "BD"],
+        "features": [
+            "Calorie Burn Calculator",
+            "BMI Calculator",
+            "Activity History Tracking",
+            "Metric & Imperial Units Support"
+        ]
+    }
+    </script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Inline Critical CSS -->
+    <style>
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4CAF50;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loading Indicator -->
+    <div class="loader-container" id="pageLoader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="website-title">
+                    <a href="index.html" class="logo-link">
+                        <h1><i class="fas fa-fire" aria-hidden="true"></i> CalBurn</h1>
+                    </a>
+                </div>
+                
+                <button 
+                    class="menu-toggle" 
+                    id="mobile-menu" 
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="main-nav"
+                >
+                    <span></span>
+                </button>
+
+                <nav id="main-nav" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                            <span>Home</span>
+                        </a></li>
+                        <li><a href="resources.html">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                            <span>Resources</span>
+                        </a></li>
+                        <li><a href="about.html">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <span>About Us</span>
+                        </a></li>
+                        <li><a href="contact.html">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span>Contact</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="menu-overlay" id="menu-overlay"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container">
+        <!-- Calorie Calculator Section -->
+        <section class="calorie-calculator" aria-labelledby="calorie-calculator-title">
+            <h2 id="calorie-calculator-title">Calories Burned Calculator</h2>
+            <form id="calorie-form" class="tool-form">
+                <div class="input-group">
+                    <label for="weight">Weight (kg):</label>
+                    <input 
+                        type="number" 
+                        id="weight" 
+                        name="weight" 
+                        min="20" 
+                        max="300" 
+                        step="0.1" 
+                        required 
+                        aria-required="true"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="activity">Activity:</label>
+                    <select 
+                        id="activity" 
+                        name="activity" 
+                        required 
+                        aria-required="true"
+                    >
+                        <option value="">Select an activity</option>
+                        <option value="walking">Walking</option>
+                        <option value="running">Running</option>
+                        <option value="cycling">Cycling</option>
+                        <option value="swimming">Swimming</option>
+                        <option value="weight_training">Weight Training</option>
+                        <option value="yoga">Yoga</option>
+                        <option value="dancing">Dancing</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="soccer">Soccer</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="intensity">Intensity:</label>
+                    <select 
+                        id="intensity" 
+                        name="intensity" 
+                        required 
+                        aria-required="true"
+                    >
+                        <option value="">Select intensity</option>
+                        <option value="low">Low</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="duration">Duration (minutes):</label>
+                    <input 
+                        type="number" 
+                        id="duration" 
+                        name="duration" 
+                        min="1" 
+                        max="1440" 
+                        required 
+                        aria-required="true"
+                    >
+                </div>
+
+                <button type="submit" class="primary-button">
+                    <i class="fas fa-calculator" aria-hidden="true"></i>
+                    Calculate Calories
+                    <span class="loading-text">Calculating...</span>
+                </button>
+            </form>
+
+            <div id="results" class="results hidden" aria-live="polite">
+                <div class="result-card">
+                    <div class="calories-burned">
+                        <span id="calories-value">0</span>
+                        <span class="unit">calories</span>
+                    </div>
+                    <p class="result-description">Estimated calories burned based on your activity</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BMI Calculator Section -->
+        <section class="bmi-calculator" aria-labelledby="bmi-calculator-title">
+            <h2 id="bmi-calculator-title">BMI Calculator</h2>
+            <form id="bmi-form" class="tool-form">
+                <div class="input-group">
+                    <label for="bmi-weight">Weight (kg):</label>
+                    <input 
+                        type="number" 
+                        id="bmi-weight" 
+                        name="bmi-weight" 
+                        min="20" 
+                        max="300" 
+                        step="0.1" 
+                        required 
+                        aria-required="true"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="height">Height (cm):</label>
+                    <input 
+                        type="number" 
+                        id="height" 
+                        name="height" 
+                        min="100" 
+                        max="250" 
+                        required 
+                        aria-required="true"
+                    >
+                </div>
+
+                <button type="submit" class="primary-button">
+                    <i class="fas fa-weight" aria-hidden="true"></i>
+                    Calculate BMI
+                    <span class="loading-text">Calculating...</span>
+                </button>
+            </form>
+
+            <div id="bmi-result" class="results hidden" aria-live="polite"></div>
+        </section>
+
+        <!-- Activity History Section -->
+        <section class="activity-history" aria-labelledby="activity-history-title">
+            <h2 id="activity-history-title">Activity History</h2>
+            <div class="chart-container">
+                <canvas id="activity-chart" aria-label="Activity history chart" role="img"></canvas>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" aria-labelledby="features-title">
+            <h2 id="features-title">Features</h2>
+            <div class="features-container">
+                <div class="feature-box">
+                    <i class="fas fa-bolt" aria-hidden="true"></i>
+                    <h3>Accurate Calculations</h3>
+                    <p>Based on scientific formulas and MET values</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-history" aria-hidden="true"></i>
+                    <h3>Activity Tracking</h3>
+                    <p>Monitor your progress over time</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Use on any device, anywhere</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <h3>Privacy First</h3>
+                    <p>No data collection or storage</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Need Help Section -->
+    <section class="need-help-section container">
+        <div class="need-help-content">
+            <h2><i class="fas fa-question-circle"></i> Need Help?</h2>
+            <p>Have questions or need assistance? We're here to help! Reach out to us through any of these channels:</p>
+            <div class="help-options">
+                <div class="help-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Support</h3>
+                    <p>Send us your questions at: jaytoolofficialweb@gmail.com</p>
+                </div>
+                <div class="help-option">
+                    <i class="fas fa-comments"></i>
+                    <h3>Quick Response</h3>
+                    <p>We typically respond within 24 hours</p>
+                </div>
+                <div class="help-option">
+                    <i class="fas fa-book"></i>
+                    <h3>Resources</h3>
+                    <p>Check our <a href="resources.html">resources section</a> for guides and FAQs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h2><i class="fas fa-fire" aria-hidden="true"></i> About CalBurn</h2>
+                <p>CalBurn is a free online tool to calculate calories burned during various physical activities instantly.</p>
+                <p>📧 Contact: jaytoolofficialweb@gmail.com</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/prajapati_jay_1711/" aria-label="Instagram" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@QuickCompare_Official" aria-label="Youtube" target="_blank" rel="noopener">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jayprajapati171120/" aria-label="Linkedin" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/jay07112007" aria-label="GitHub" target="_blank" rel="noopener">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tools & Features -->
+            <div class="footer-section">
+                <h2>Tools & Features</h2>
+                <ul>
+                    <li><a href="index.html">Calorie Calculator</a></li>
+                    <li><a href="index.html#bmi-calculator">BMI Calculator</a></li>
+                    <li><a href="index.html#activity-history">Activity History</a></li>
+                    <li><a href="resources.html">Fitness Resources</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal & Info -->
+            <div class="footer-section">
+                <h2>Legal & Info</h2>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="dmca.html">DMCA Notice</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> CalBurn. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Set copyright year
+        document.getElementById("year").textContent = new Date().getFullYear();
+        
+        // Hide loader when page is fully loaded
+        window.addEventListener('load', function() {
+            document.getElementById('pageLoader').classList.add('hidden');
+        });
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(function(err) {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+    <script src="app.js" defer></script>
+</body>
+</html>
