@@ -208,7 +208,9 @@
                         step="0.1" 
                         required 
                         aria-required="true"
+                        title="Please enter a weight between 20 and 300 kg"
                     >
+                    <span class="error-message" id="weight-error"></span>
                 </div>
 
                 <div class="input-group">
@@ -218,6 +220,7 @@
                         name="activity" 
                         required 
                         aria-required="true"
+                        title="Please select an activity"
                     >
                         <option value="">Select an activity</option>
                         <option value="walking">Walking</option>
@@ -230,21 +233,24 @@
                         <option value="basketball">Basketball</option>
                         <option value="soccer">Soccer</option>
                     </select>
+                    <span class="error-message" id="activity-error"></span>
                 </div>
 
                 <div class="input-group">
-                    <label for="intensity">Intensity:</label>
+                    <label for="intensity">Intensity Level:</label>
                     <select 
                         id="intensity" 
                         name="intensity" 
                         required 
                         aria-required="true"
+                        title="Please select an intensity level"
                     >
                         <option value="">Select intensity</option>
                         <option value="low">Low</option>
                         <option value="moderate">Moderate</option>
                         <option value="high">High</option>
                     </select>
+                    <span class="error-message" id="intensity-error"></span>
                 </div>
 
                 <div class="input-group">
@@ -257,7 +263,9 @@
                         max="1440" 
                         required 
                         aria-required="true"
+                        title="Please enter a duration between 1 and 1440 minutes"
                     >
+                    <span class="error-message" id="duration-error"></span>
                 </div>
 
                 <button type="submit" class="primary-button">
