@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
     <!-- Primary Meta Tags -->
-    <title>CalBurn - Free Calories Burned Calculator | Track Your Fitness Journey</title>
-    <meta name="title" content="CalBurn - Free Calories Burned Calculator | Track Your Fitness Journey">
-    <meta name="description" content="Calculate calories burned for various activities with our free, accurate calculator. Features BMI calculator, activity tracking, and personalized fitness insights. Start your health journey today!">
-    <meta name="keywords" content="calorie calculator, calories burned calculator, BMI calculator, fitness tracker, workout calculator, exercise calculator, activity tracker, health calculator, fitness tools, weight loss calculator, calorie counter india, fitness calculator usa">
+    <title>Calories Burned Calculator - Free Online Tool to Calculate Calories Burned</title>
+    <meta name="title" content="Calories Burned Calculator - Free Online Tool to Calculate Calories Burned">
+    <meta name="description" content="Use our free calories burned calculator to instantly estimate calories burned during exercise. Calculate calories burned for walking, running, cycling and more activities. Get accurate results based on your weight and activity duration.">
+    <meta name="keywords" content="calories burned calculator, calculate calories burned, calorie burn calculator, exercise calorie calculator, calories burned walking, calories burned running, workout calorie calculator, activity calorie calculator, free calorie calculator, calories burned exercise">
     <meta name="author" content="Jay Prajapati">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="googlebot" content="index, follow">
@@ -63,9 +63,9 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "CalBurn",
+        "name": "Calories Burned Calculator",
         "url": "https://tool-star.github.io/",
-        "description": "Free online calculator for tracking calories burned during various physical activities",
+        "description": "Free online calculator that helps you calculate calories burned during various physical activities and exercises. Get accurate estimates based on your weight, activity type, intensity and duration.",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "Any",
         "offers": {
@@ -195,7 +195,9 @@
     <main id="main-content" class="container">
         <!-- Calorie Calculator Section -->
         <section class="calorie-calculator" aria-labelledby="calorie-calculator-title">
-            <h2 id="calorie-calculator-title">Calories Burned Calculator</h2>
+            <h1 id="calorie-calculator-title">Calories Burned Calculator</h1>
+            <p class="calculator-intro">Calculate how many calories you burn during different activities. Simply enter your weight, choose an activity, set the intensity and duration to get accurate results.</p>
+            
             <form id="calorie-form" class="tool-form">
                 <div class="input-group">
                     <label for="weight">Weight (kg):</label>
@@ -208,9 +210,7 @@
                         step="0.1" 
                         required 
                         aria-required="true"
-                        title="Please enter a weight between 20 and 300 kg"
                     >
-                    <span class="error-message" id="weight-error"></span>
                 </div>
 
                 <div class="input-group">
@@ -220,7 +220,6 @@
                         name="activity" 
                         required 
                         aria-required="true"
-                        title="Please select an activity"
                     >
                         <option value="">Select an activity</option>
                         <option value="walking">Walking</option>
@@ -233,24 +232,21 @@
                         <option value="basketball">Basketball</option>
                         <option value="soccer">Soccer</option>
                     </select>
-                    <span class="error-message" id="activity-error"></span>
                 </div>
 
                 <div class="input-group">
-                    <label for="intensity">Intensity Level:</label>
+                    <label for="intensity">Intensity:</label>
                     <select 
                         id="intensity" 
                         name="intensity" 
                         required 
                         aria-required="true"
-                        title="Please select an intensity level"
                     >
                         <option value="">Select intensity</option>
                         <option value="low">Low</option>
                         <option value="moderate">Moderate</option>
                         <option value="high">High</option>
                     </select>
-                    <span class="error-message" id="intensity-error"></span>
                 </div>
 
                 <div class="input-group">
@@ -263,9 +259,7 @@
                         max="1440" 
                         required 
                         aria-required="true"
-                        title="Please enter a duration between 1 and 1440 minutes"
                     >
-                    <span class="error-message" id="duration-error"></span>
                 </div>
 
                 <button type="submit" class="primary-button">
@@ -337,27 +331,78 @@
 
         <!-- Features Section -->
         <section class="features" aria-labelledby="features-title">
-            <h2 id="features-title">Features</h2>
+            <h2 id="features-title">Why Use Our Calories Burned Calculator?</h2>
             <div class="features-container">
                 <div class="feature-box">
                     <i class="fas fa-bolt" aria-hidden="true"></i>
                     <h3>Accurate Calculations</h3>
-                    <p>Based on scientific formulas and MET values</p>
+                    <p>Get precise calories burned estimates using scientifically validated MET values and formulas</p>
                 </div>
                 <div class="feature-box">
                     <i class="fas fa-history" aria-hidden="true"></i>
                     <h3>Activity Tracking</h3>
-                    <p>Monitor your progress over time</p>
+                    <p>Track your daily calorie burn and monitor progress over time</p>
                 </div>
                 <div class="feature-box">
                     <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                    <h3>Mobile Friendly</h3>
-                    <p>Use on any device, anywhere</p>
+                    <h3>Easy to Use</h3>
+                    <p>Simple interface works on all devices - mobile, tablet or desktop</p>
                 </div>
                 <div class="feature-box">
                     <i class="fas fa-lock" aria-hidden="true"></i>
-                    <h3>Privacy First</h3>
-                    <p>No data collection or storage</p>
+                    <h3>100% Free</h3>
+                    <p>No registration or payment required. Calculate calories burned instantly</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Info Section -->
+        <section class="additional-info">
+            <h2>About Calories Burned Calculator</h2>
+            <p>Our calories burned calculator helps you estimate the number of calories you burn during various physical activities and exercises. Whether you're walking, running, cycling, swimming or doing other activities, this calculator provides accurate estimates based on your weight, activity type, intensity level and duration.</p>
+            
+            <div class="how-to-use">
+                <h3><i class="fas fa-info-circle"></i> How to Use the Calculator</h3>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <h4><i class="fas fa-weight"></i> Enter Weight</h4>
+                            <p>Input your current weight in kilograms using the number field</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <h4><i class="fas fa-running"></i> Select Activity</h4>
+                            <p>Choose your exercise type from our comprehensive list of activities</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <h4><i class="fas fa-tachometer-alt"></i> Set Intensity</h4>
+                            <p>Specify your activity intensity level (low, moderate, or high)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <span class="step-number">4</span>
+                        <div class="step-content">
+                            <h4><i class="fas fa-clock"></i> Add Duration</h4>
+                            <p>Enter how long you performed the activity in minutes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <span class="step-number">5</span>
+                        <div class="step-content">
+                            <h4><i class="fas fa-calculator"></i> Get Results</h4>
+                            <p>Click "Calculate Calories" and instantly see your calories burned</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
