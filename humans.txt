@@ -1,0 +1,41 @@
+/* TEAM */
+Developer: Jay Tool
+Contact: jaytoolofficialweb@gmail.com
+GitHub: https://github.com/tool-star
+From: India
+
+/* SITE */
+Last update: 2024/03/19
+Language: English
+Doctype: HTML5
+IDE: Visual Studio Code
+Standards: HTML5, CSS3, JavaScript
+Components: Bootstrap, Font Awesome
+Software: Git
+
+/* TECHNOLOGY */
+- HTML5
+- CSS3 (Flexbox, Grid, Animations)
+- Vanilla JavaScript
+- Responsive Design
+- Progressive Web App
+- Local Storage for Data
+- Chart.js for Visualizations
+
+/* THANKS */
+Name: Open Source Community
+For: Inspiration and resources
+
+/* SITE FEATURES */
+- Responsive Design
+- Dark Mode Support
+- Accessibility Features
+- Progressive Web App
+- Mobile-First Approach
+- Cross-Browser Compatible
+
+/* THANKS */
+Font Awesome - for the awesome icons
+Google Fonts - for beautiful typography
+Chart.js - for data visualization
+GitHub Pages - for hosting 
