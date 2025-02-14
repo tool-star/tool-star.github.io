@@ -1,0 +1,36 @@
+{
+  "name": "CalBurn - Calories Burned Calculator",
+  "short_name": "CalBurn",
+  "description": "Calculate calories burned during various activities and track your fitness goals",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4a90e2",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
+  "categories": ["fitness", "health", "lifestyle"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Calculate Calories",
+      "url": "/",
+      "description": "Calculate calories burned"
+    },
+    {
+      "name": "Resources",
+      "url": "/resources.html",
+      "description": "View fitness resources"
+    }
+  ]
+} 
