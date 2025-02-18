@@ -36,7 +36,6 @@ Allow: /planner.pdf
 Allow: /README.md
 
 # Prevent access to XML files except sitemap
-Disallow: /*.xml$
 Allow: /sitemap.xml
 
 # Prevent crawling of search results and temporary files
