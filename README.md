@@ -1,9 +1,9 @@
 # tool-star.github.io
-# CalBurn - Calories Burned Calculator 🔥
+# Calories Burn - Calories Burned Calculator 🔥
 
-A modern, user-friendly web application for calculating calories burned during various physical activities. CalBurn helps users track their fitness journey with accurate calculations and intuitive visualizations.
+A modern, user-friendly web application for calculating calories burned during various physical activities. Calories Burn helps users track their fitness journey with accurate calculations and intuitive visualizations.
 
-![CalBurn Logo](android-chrome-192x192.png)
+![Calories Burn Logo](android-chrome-192x192.png)
 
 ## 🌟 Features
 
@@ -98,7 +98,7 @@ You can customize the appearance by modifying:
 1. Visit the website in a supported browser
 2. Look for the "Add to Home Screen" prompt
 3. Follow the installation instructions
-4. Access CalBurn directly from your device's home screen
+4. Access Calories Burn directly from your device's home screen
 
 ## 🔒 Security
 
@@ -145,4 +145,4 @@ Last updated: March 19, 2024
 
 ## 🌐 Live Demo
 
-Visit [CalBurn](https://tool-star.github.io/) to try it out!
+Visit [Calories Burn](https://tool-star.github.io/) to try it out!
