@@ -43,6 +43,9 @@ Disallow: /*?*
 Disallow: /*.tmp$
 Disallow: /*.json$
 
+# Google Ads
+Disallow: /.Ads.txt
+
 # Sitemap location
 Sitemap: https://tool-star.github.io/sitemap.xml
 
@@ -55,9 +58,6 @@ Allow: /*.png$
 Allow: /*.jpg$
 Allow: /*.ico$
 Allow: /*.svg$
-
-User-agent: Google-Ads
-Disallow: /.Ads.txt
 
 User-agent: Mediapartners-Google
 Allow: /
