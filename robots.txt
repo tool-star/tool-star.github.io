@@ -56,6 +56,9 @@ Allow: /*.jpg$
 Allow: /*.ico$
 Allow: /*.svg$
 
+User-agent: Google-Ads
+Disallow: /.Ads.txt
+
 User-agent: Mediapartners-Google
 Allow: /
 
