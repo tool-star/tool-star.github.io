@@ -43,9 +43,6 @@ Disallow: /*?*
 Disallow: /*.tmp$
 Disallow: /*.json$
 
-# Google Ads
-Disallow: /.Ads.txt
-
 # Sitemap location
 Sitemap: https://tool-star.github.io/sitemap.xml
 
